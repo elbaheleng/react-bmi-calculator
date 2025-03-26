@@ -5,6 +5,8 @@ import TextField from '@mui/material/TextField';
 import { useState } from 'react'
 import Display from './Display';
 import InputAdornment from '@mui/material/InputAdornment';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 function Input() {
   const [weight, setWeight] = useState("")
@@ -83,14 +85,11 @@ function Input() {
 
         </Col>
       </Row>
-      <div className='my-3 d-flex flex-row justify-content-start gap-2 text-center'>
-        <div className='col-sm-6'>
-        <button className='btn btn-primary' onClick={calc}>CALCULATE BMI</button>
-        </div>
-        <div className='col-sm-6'>
-        <button className='btn btn-primary' onClick={reset}>RESET</button>
-        </div>
-      </div>
+      <Stack spacing={5} direction="row" className='w-50 ms-5 mb-3'>
+              <Button variant="contained" color="primary" size="small" onClick={calc}>CALCULATE BMI</Button>
+              <Button variant="contained" color="primary" size="small" onClick={reset}>RESET</Button>
+      </Stack>
+
       <div className='bg-light container rounded-2 bg-opacity-50'>
         {bmi != "" && <h1 className='text-center pt-3 mb-0'>Your BMI is {bmi}</h1>}
 
