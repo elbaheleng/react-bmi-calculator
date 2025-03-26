@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import  "/src/gauge.js"
 
 function Display(props) {
     useEffect(() => {

@@ -1,12 +1,6 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
 import TextField from '@mui/material/TextField';
 import { useState } from 'react'
 import Display from './Display';
@@ -89,9 +83,13 @@ function Input() {
 
         </Col>
       </Row>
-      <div className='text-center w-50 my-3'>
+      <div className='my-3 d-flex flex-row justify-content-start gap-2 text-center'>
+        <div className='col-sm-6'>
         <button className='btn btn-primary' onClick={calc}>CALCULATE BMI</button>
-        <button className='btn btn-primary ms-3' onClick={reset}>RESET</button>
+        </div>
+        <div className='col-sm-6'>
+        <button className='btn btn-primary' onClick={reset}>RESET</button>
+        </div>
       </div>
       <div className='bg-light container rounded-2 bg-opacity-50'>
         {bmi != "" && <h1 className='text-center pt-3 mb-0'>Your BMI is {bmi}</h1>}
